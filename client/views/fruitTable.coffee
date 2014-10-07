@@ -3,16 +3,17 @@ _.each [
   {name: 'Apple', price: 1}
   {name: 'Orange', price: 2}
   {name: 'Banana', price: 3}
+  {name: 'Pear', price: 2}
+  {name: 'Grapes', price: 3}
 ], (product) -> fruits.insert(product)
-console.log('fruits', fruits)
 
 Template.fruitTable.helpers
 
-  fruits: -> fruits
+  collection: -> fruits
   settings: ->
-    rowsPerPage: 10
+    rowsPerPage: 3
     showFilter: true
     fields: [
-      {key: 'name', label: 'Name'},
+      {key: 'name', label: 'Name'}
       {key: 'price', label: 'Price'}
     ]
