@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "aslagle:reactive-table": {
+      "git": "https://github.com/aramk/reactive-table",
+      "branch": "master"
+    }
+  }
+}
