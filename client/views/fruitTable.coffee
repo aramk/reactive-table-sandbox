@@ -5,12 +5,13 @@ _.each [
   {name: 'Banana', price: 3}
   {name: 'Pear', price: 2}
   {name: 'Grapes', price: 3}
-], (product) -> fruits.insert(product)
+], (item) -> fruits.insert(item)
 
 Template.fruitTable.helpers
 
   collection: -> fruits
   settings: ->
+    group: 'fruits'
     rowsPerPage: 3
     showFilter: true
     fields: [
